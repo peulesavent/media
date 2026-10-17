@@ -155,7 +155,10 @@ def slide(n, total, label, body, big=None, illus=None, title=None, footer=None):
         tf = font(FONT_BLACK, ts * SS)
         y = draw_rich(d, (m, y), title, tf, tw, leading=1.1) + 30 * SS
     if big:
-        bf = font(FONT_BLACK, 190 * SS)
+        bs = 190
+        while bs > 90 and d.textlength(big, font=font(FONT_BLACK, bs * SS)) > tw:
+            bs -= 6
+        bf = font(FONT_BLACK, bs * SS)
         d.text((m - 8 * SS, y - 30 * SS), big, font=bf, fill=ACCENT)
         y += 200 * SS
     if body:
