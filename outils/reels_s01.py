@@ -50,12 +50,14 @@ def _done(im):
 
 
 def planet(d, cx, cy, r, phase=0.0):
-    d.ellipse((cx - r, cy - r, cx + r, cy + r), fill=(214, 158, 66))
-    for k, (dy, h) in enumerate([(-0.55, 0.12), (-0.2, 0.16), (0.2, 0.10), (0.55, 0.14)]):
-        y0 = cy + dy * r
-        half = math.sqrt(max(0, r * r - (dy * r) ** 2)) * 0.96
-        d.rounded_rectangle((cx - half, y0, cx + half, y0 + h * r), radius=int(h * r / 2),
-                            fill=(190, 132, 50))
+    # disque uni et voilé : dégradé concentrique du bord vers le centre
+    steps = 24
+    for k in range(steps):
+        f = k / (steps - 1)
+        rr = r * (1 - 0.55 * f)
+        col = (int(200 + 40 * f), int(160 + 52 * f), int(92 + 60 * f))
+        ox = -0.18 * r * f
+        d.ellipse((cx + ox - rr, cy + ox - rr, cx + ox + rr, cy + ox + rr), fill=col)
     # repère qui tourne : un point qui glisse sur l'équateur
     x = cx + math.cos(math.pi * (1 - phase)) * r * 0.85
     d.ellipse((x - 22, cy - 22, x + 22, cy + 22), fill=INK)
@@ -266,8 +268,8 @@ JAUGE = [
          illus=ill_arrow_pulse, dur=2.8),
     dict(text="Flèche à gauche, trappe à gauche. *Flèche à droite, trappe à droite.*",
          illus=ill_arrow_flip, dur=3.6),
-    dict(text="On la trouve sur la plupart des voitures depuis la fin des années 80. "
-              "Fini les demi-tours à la station.", dur=3.4),
+    dict(text="Inventée chez Ford à la fin des années 80, elle est aujourd'hui sur la plupart des voitures. "
+              "Fini les demi-tours à la station.", dur=3.6),
 ]
 
 if __name__ == "__main__":

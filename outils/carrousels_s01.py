@@ -115,7 +115,7 @@ def ill_pigeon(W, H):
 
 TANGER = dict(slug="2026-10-19-legation-tanger", label="Patrimoine marocain", slides=[
     dict(illus=ill_arche,
-         title="Le seul monument historique américain hors des États-Unis est *au Maroc.*"),
+         title="La toute première propriété des États-Unis à l'étranger n'est ni à Londres ni à Paris. *Elle est au Maroc.*"),
     dict(big="1777",
          body="Les États-Unis viennent tout juste de proclamer leur indépendance. "
               "Presque personne au monde ne les reconnaît encore."),
@@ -123,7 +123,7 @@ TANGER = dict(slug="2026-10-19-legation-tanger", label="Patrimoine marocain", sl
               "Le Maroc devient l'un des tout premiers pays à reconnaître la jeune nation."),
     dict(big="1786",
          body="Les deux pays signent un traité de paix et d'amitié. "
-              "Il est *toujours en vigueur*, ce qui en fait l'un des plus durables de l'histoire américaine."),
+              "La relation qu'il crée n'a jamais été rompue. C'est le *plus ancien traité ininterrompu* des États-Unis."),
     dict(big="1821",
          body="Le sultan *Moulay Slimane* offre aux Américains une maison dans la médina de Tanger. "
               "C'est le premier bâtiment que les États-Unis possèdent pour une mission diplomatique."),
@@ -131,7 +131,7 @@ TANGER = dict(slug="2026-10-19-legation-tanger", label="Patrimoine marocain", sl
               "Pendant la Seconde Guerre mondiale, les services de renseignement américains "
               "y préparent leurs opérations en Afrique du Nord."),
     dict(body="En 1982, elle est classée *National Historic Landmark*. "
-              "La seule au monde située hors du sol américain.\n\n"
+              "Le Département d'État la présente comme la seule de ce type hors des États-Unis.\n\n"
               "C'est aujourd'hui un musée et une bibliothèque, en plein cœur de la médina.",
          footer="La prochaine fois que tu passes à Tanger, tu sais où aller."),
 ])
@@ -143,24 +143,24 @@ MELASSE = dict(slug="2026-10-21-melasse-boston", label="Histoire vraie", slides=
               "Après plusieurs jours de grand froid, le thermomètre remonte enfin au-dessus de 4 degrés."),
     dict(body="Près du port se dresse une cuve géante appartenant à une distillerie.\n\n"
               "À l'intérieur, *8,7 millions de litres de mélasse*, le sirop noir et épais tiré de la canne à sucre."),
-    dict(big="8 m",
-         body="D'un coup, la cuve cède. Une vague brune haute comme un immeuble de trois étages "
-              "déferle dans les rues, jusqu'à *56 km/h* selon les estimations."),
-    dict(body="Le vrai piège, c'est la texture. En refroidissant, la mélasse s'épaissit "
+    dict(big="56 km/h",
+         body="D'un coup, la cuve cède. Une vague brune, jusqu'à *8 mètres* de haut selon certaines sources, "
+              "déferle dans les rues à près de 56 km/h."),
+    dict(body="Le pire, c'est que la mélasse colle. En refroidissant, la mélasse s'épaissit "
               "et colle comme du goudron.\n\n"
               "Bilan : *21 morts* et environ 150 blessés."),
     dict(body="Les secours fouillent pendant quatre jours. L'eau du port reste brune jusqu'à l'été.\n\n"
-              "119 habitants attaquent l'entreprise en justice. Trois ans plus tard, "
+              "119 habitants attaquent l'entreprise en justice. En 1925, six ans plus tard, "
               "elle est jugée responsable et doit payer *628 000 dollars*."),
-    dict(body="Le détail le plus étrange vient après.\n\n"
+    dict(body="Et le plus étrange reste à venir.\n\n"
               "Pendant des décennies, les habitants ont juré que par les chaudes journées d'été, "
               "le quartier *sentait encore la mélasse.*",
          footer="Boston, 15 janvier 1919. Une date que la ville n'a jamais vraiment digérée."),
 ])
 
-CHERAMI = dict(slug="2026-10-23-cher-ami", label="Histoire vraie", slides=[
+CHERAMI = dict(slug="2026-10-23-cher-ami", label="Histoire ou légende", slides=[
     dict(illus=ill_pigeon,
-         title="Ce pigeon aurait sauvé 194 soldats. *Tout le problème est dans le « aurait ».*"),
+         title="Ce pigeon aurait sauvé 194 soldats. *Tout le problème tient dans ce « aurait ».*"),
     dict(body="*Octobre 1918*, forêt d'Argonne.\n\n"
               "Plus de 500 soldats américains se retrouvent encerclés. "
               "L'histoire les retiendra sous le nom de *bataillon perdu*."),
@@ -169,12 +169,13 @@ CHERAMI = dict(slug="2026-10-23-cher-ami", label="Histoire vraie", slides=[
     dict(body="Selon la légende, le dernier oiseau, *Cher Ami*, s'envole sous les balles. "
               "Touché à la poitrine, une patte presque arrachée, il atteint quand même son pigeonnier."),
     dict(body="Le message, en substance : notre artillerie nous tire dessus, pour l'amour du ciel, arrêtez.\n\n"
-              "Les tirs cessent. À l'arrivée des secours, seuls *194 hommes* repartent à pied."),
+              "Les tirs finissent par cesser. Quand les secours arrivent, quatre jours plus tard, seuls *194 hommes* repartent à pied."),
     dict(body="Cher Ami reçoit la *Croix de guerre* française. Il meurt de ses blessures en juin 1919.\n\n"
-              "Depuis 1921, il est exposé, naturalisé, au musée national d'histoire américaine à Washington."),
-    dict(body="Sauf que le conservateur du musée lui-même le reconnaît : *aucune preuve solide* "
-              "ne relie Cher Ami au bataillon perdu. Les archives de l'armée placent sa blessure plus tard dans le mois.\n\n"
-              "On a même attendu 2021 et un test ADN pour être sûr que c'était un mâle.",
+              "Naturalisé, il est exposé par la Smithsonian depuis 1921. On peut le voir aujourd'hui au musée national d'histoire américaine, à Washington."),
+    dict(body="Sauf que le conservateur du musée lui-même le reconnaît : *très peu de preuves* "
+              "relient Cher Ami au bataillon perdu. Les archives de l'armée placent sa blessure plus tard dans le mois, "
+              "et les tirs s'étaient arrêtés avant son arrivée.\n\n"
+              "Il a même fallu un test ADN, en 2021, pour être sûr que c'était un mâle.",
          footer="Héros ou légende, il reste le pigeon le plus célèbre de l'histoire."),
 ])
 

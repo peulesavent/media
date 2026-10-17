@@ -132,9 +132,16 @@ def slide(n, total, label, body, big=None, illus=None, title=None, footer=None):
     d.text((W - m - d.textlength(cnt, font=cf), 78 * SS), cnt, font=cf, fill=MUTED)
 
     y = 190 * SS
-    bf_ = font(FONT_MED, 60 * SS)
+    bottom = H - (330 if footer else 150) * SS
+    bsize = 60
+    while body and bsize > 44:
+        bf_ = font(FONT_MED, bsize * SS)
+        need = (200 * SS if big else 0) + text_height(d, body, bf_, tw, 1.32)
+        if 190 * SS + need <= bottom:
+            break
+        bsize -= 2
+    bf_ = font(FONT_MED, bsize * SS)
     if illus is None and not title:
-        bottom = H - (330 if footer else 140) * SS
         hgt = (200 * SS if big else 0) + (text_height(d, body, bf_, tw, 1.32) if body else 0)
         y = max(y, 190 * SS + (bottom - 190 * SS - hgt) // 2)
     if illus is not None:
@@ -142,7 +149,10 @@ def slide(n, total, label, body, big=None, illus=None, title=None, footer=None):
         img.paste(ill, (0, y - 40 * SS), ill)
         y += int(H * 0.42) - 10 * SS
     if title:
-        tf = font(FONT_BLACK, 86 * SS)
+        ts = 86
+        while ts > 60 and y + text_height(d, title, font(FONT_BLACK, ts * SS), tw, 1.1) > H - 140 * SS:
+            ts -= 2
+        tf = font(FONT_BLACK, ts * SS)
         y = draw_rich(d, (m, y), title, tf, tw, leading=1.1) + 30 * SS
     if big:
         bf = font(FONT_BLACK, 190 * SS)
