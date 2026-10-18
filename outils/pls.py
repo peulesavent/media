@@ -57,7 +57,18 @@ def wrap(draw, text, fnt, width):
     return lines
 
 
+def nbsp(text):
+    """Espaces insécables automatiques : milliers, av. J.-C., unités."""
+    import re
+    text = re.sub(r"(\d) (\d{3})", "\\1\u00a0\\2", text)
+    text = re.sub(r"(\d) (\d{3})", "\\1\u00a0\\2", text)
+    text = text.replace(" av. J.-C.", "\u00a0av.\u00a0J.-C.").replace("av. J.-C.", "av.\u00a0J.-C.")
+    text = re.sub(r"(\d) (ans|km|m|jours|%)\b", "\\1\u00a0\\2", text)
+    return text
+
+
 def draw_rich(draw, xy, text, fnt, width, color=INK, accent=ACCENT, leading=1.28, align="left"):
+    text = nbsp(text)
     x0, y = xy
     space = draw.textlength(" ", font=fnt)
     lh = int(fnt.size * leading)
@@ -79,6 +90,7 @@ def draw_rich(draw, xy, text, fnt, width, color=INK, accent=ACCENT, leading=1.28
 
 
 def text_height(draw, text, fnt, width, leading=1.28):
+    text = nbsp(text)
     lh = int(fnt.size * leading)
     return sum(lh if l else lh // 2 for l in wrap(draw, text, fnt, width))
 

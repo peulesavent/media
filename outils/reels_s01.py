@@ -9,7 +9,7 @@ from pls import (font, draw_rich, text_height, mark, watermark, layer,
 W, H, FPS = 1080, 1920, 30
 IW, IH = 1080, 760          # zone d'illustration
 ILL_Y = 330
-INTRO, OUTRO = 1.0, 2.6
+INTRO, OUTRO = 0.0, 2.6   # pas d'intro : le fait apparaît dès la première image
 POP = 0.35                  # instant où le point apparaît (et où sonne la signature)
 
 
@@ -193,7 +193,7 @@ def outro_frame(t):
 def card_frame(card, tl, txt):
     img = Image.new("RGB", (W, H), BG)
     dur = card["dur"]
-    kin = ease(tl / 0.35)
+    kin = 1.0 if card.get("first") else ease(tl / 0.35)
     kout = 1 - ease((tl - (dur - 0.25)) / 0.25)
     k = min(kin, kout)
     if card.get("illus"):
@@ -217,12 +217,13 @@ def render(slug, cards):
         "ffmpeg", "-y", "-loglevel", "error",
         "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS), "-i", "-",
         "-f", "lavfi", "-i", snd,
-        "-filter_complex", f"[1:a]adelay={int(POP*1000)}|{int(POP*1000)},apad=whole_dur={total:.3f}[a]",
+        "-filter_complex", f"[1:a]adelay={int((total-OUTRO+POP)*1000)}|{int((total-OUTRO+POP)*1000)},apad=whole_dur={total:.3f}[a]",
         "-map", "0:v", "-map", "[a]",
         "-c:v", "libx264", "-pix_fmt", "yuv420p", "-profile:v", "high", "-crf", "18",
         "-preset", "medium", "-movflags", "+faststart",
         "-c:a", "aac", "-b:a", "128k", "-ac", "2", "-t", f"{total:.3f}",
         f"{folder}/reel.mp4"], stdin=subprocess.PIPE)
+    cards[0]["first"] = True
     txts = [text_layer(c["text"], hook=c.get("hook", False), has_illus=bool(c.get("illus")))
             for c in cards]
     cover = None
@@ -239,7 +240,7 @@ def render(slug, cards):
                 tl -= c["dur"]
         else:
             img = outro_frame(t - (total - OUTRO))
-        if cover is None and t >= INTRO + 1.2:
+        if cover is None and t >= INTRO + 0.6:
             cover = img
         ff.stdin.write(img.tobytes())
     ff.stdin.close()
