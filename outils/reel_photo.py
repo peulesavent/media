@@ -73,10 +73,12 @@ def layout(text, fnt, width, leading):
     d = ImageDraw.Draw(Image.new("RGB", (8, 8)))
     space = d.textlength(" ", font=fnt)
     lines, cur, curw = [], [], 0
+    text = text.replace("\\*", "\ue000")
     text = re.sub(r" ([?:!])", "\u00a0\\1", nbsp(text))
     text = re.sub(r"(\d) (\w)", "\\1\u00a0\\2", text)
     for para in text.split("\n"):
         for w, a, g in tokens(para):
+            w = w.replace("\ue000", "*")
             ww = d.textlength(w, font=fnt)
             if g and cur:
                 cur.append((w, a, True, ww))
