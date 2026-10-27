@@ -1,0 +1,157 @@
+[
+ {
+  "slug": "ss01-xmas",
+  "photo": "xmas",
+  "screens": [
+   "Christmas is about 8 weeks away.",
+   "$800 for gifts means $100 a week, starting now.",
+   "Wait until December and it lands on your credit card.",
+   "Set a cap per person before you shop.",
+   "Send this to the friend who overspends every December."
+  ]
+ },
+ {
+  "slug": "ss02-packing",
+  "photo": "packing",
+  "screens": [
+   "Pack by day, not by item.",
+   "Write each day of the trip and what you'll do.",
+   "Pick one outfit per day, then cut the repeats.",
+   "You pack less and you notice what's missing.",
+   "Send this to the person who always overpacks."
+  ]
+ },
+ {
+  "slug": "ss03-zero",
+  "photo": "zero",
+  "screens": [
+   "Give every dollar a job.",
+   "Zero-based budget: income minus planned spending equals zero.",
+   "Savings counts as a job. So does paying off debt.",
+   "Nothing is left over, so nothing quietly disappears.",
+   "Send this to someone who never knows where it went."
+  ]
+ },
+ {
+  "slug": "ss04-buffer",
+  "photo": "buffer",
+  "screens": [
+   "Your trip will cost more than you planned.",
+   "Resort fees, tips, transfers, baggage, card fees.",
+   "Add a 10% buffer line to your travel budget.",
+   "If you don't use it, it covers your next trip's deposit.",
+   "Send this to your travel buddy."
+  ]
+ },
+ {
+  "slug": "ss05-deposits",
+  "photo": "deposits",
+  "screens": [
+   "The wedding cost nobody warns you about.",
+   "Most vendors take a deposit now and the balance later.",
+   "Balances come due on different dates, many close to the wedding.",
+   "List every vendor with its amount and due date.",
+   "Send this to a newly engaged friend."
+  ]
+ },
+ {
+  "slug": "ss06-emergency",
+  "photo": "emergency",
+  "screens": [
+   "Six months of savings feels impossible. Start smaller.",
+   "The usual guideline: three to six months of expenses.",
+   "First milestone: one month of essential costs.",
+   "Then add a little every payday until you reach three months.",
+   "Send this to someone starting from zero."
+  ]
+ },
+ {
+  "slug": "ss07-venue",
+  "photo": "venue",
+  "screens": [
+   "The venue is usually your biggest wedding cost.",
+   "Average US reception venue cost in 2025: $12,900.",
+   "It also sets your date and caps your guest count.",
+   "So price venues first, then build the rest around it.",
+   "Send this to someone touring venues this month."
+  ]
+ },
+ {
+  "slug": "ss08-payfirst",
+  "photo": "payfirst",
+  "screens": [
+   "Save on payday, not at month end.",
+   "What's left at the end of the month is usually nothing.",
+   "Schedule an automatic transfer for the day your pay lands.",
+   "Start with 5% if 20% feels like too much.",
+   "Send this to someone who says they can't save."
+  ],
+  "blur": 6
+ },
+ {
+  "slug": "ss09-sinking",
+  "photo": "sinking",
+  "screens": [
+   "Your car insurance bill isn't a surprise.",
+   "Yearly costs feel like emergencies because they show up all at once.",
+   "$1,200 a year is $100 a month.",
+   "Set it aside monthly in a sinking fund. Done.",
+   "Send this to someone who dreads renewal season."
+  ]
+ },
+ {
+  "slug": "ss10-debt",
+  "photo": "debt2",
+  "screens": [
+   "Two debt payoff methods. One usually costs less.",
+   "Snowball: smallest balance first. Quick wins keep you going.",
+   "Avalanche: highest interest rate first. Usually less interest paid.",
+   "The best one is the one you'll stick to.",
+   "Send this to someone juggling three credit cards."
+  ]
+ },
+ {
+  "slug": "ss11-big3",
+  "photo": "big3",
+  "screens": [
+   "Stop tracking coffee. Track these three first.",
+   "Housing, transportation and food: about 63% of US household spending.",
+   "Small cuts there move more money than any latte rule.",
+   "Review those three every month before anything else.",
+   "Send this to someone tracking every cent."
+  ]
+ },
+ {
+  "slug": "ss12-fifty",
+  "photo": "fifty",
+  "screens": [
+   "50/30/20 starts from take-home pay, not salary.",
+   "50% to needs: rent, groceries, bills, minimum payments.",
+   "30% to wants. 20% to savings and extra debt payments.",
+   "From All Your Worth by Elizabeth Warren and Amelia Warren Tyagi, 2005.",
+   "Send this to the friend who budgets from gross pay."
+  ]
+ },
+ {
+  "slug": "ss13-guests",
+  "photo": "guests",
+  "screens": [
+   "Average wedding: about $292 per guest.",
+   "Average US wedding in 2025: $34,200 for 117 guests.",
+   "Each guest you cut trims catering, drinks, rentals and favors.",
+   "Your guest list is your biggest budget lever.",
+   "Send this to someone writing their guest list."
+  ]
+ },
+ {
+  "slug": "ss14-biweekly",
+  "photo": "biweekly",
+  "screens": [
+   "Paid every two weeks? This is for you.",
+   "That's 26 paychecks a year, not 24.",
+   "So in most years, two months bring a third paycheck.",
+   "Budget on two per month. Send the extras to savings or debt.",
+   "Send this to someone paid every other Friday."
+  ]
+ }
+]
